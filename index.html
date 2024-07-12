@@ -7,28 +7,31 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+    <header>
+        <h1>Agente reactivo</h1>
+    </header>
+    
     <div class="contenedor">
         <div id="tablero"></div>
         <div class="opciones">
             <!-- Radio buttons para seleccionar la imagen -->
             <label>
-                <input type="radio" name="imagen" value="obstaculo.jpg" checked> Obstaculos
+                <input type="radio" name="imagen" value="images/obstaculo.jpg" checked> Obstaculos
             </label>
             <label>
-                <input type="radio" name="imagen" value="Agente.jpg"> Agente
+                <input type="radio" name="imagen" value="images/Agente.jpg"> Agente
             </label>
             <label>
-                <input type="radio" name="imagen" value="Muestra.webp"> Muestra
+                <input type="radio" name="imagen" value="images/Muestra.webp"> Muestra
             </label>
             <label>
-                <input type="radio" name="imagen" value="Nave.webp"> Destino
+                <input type="radio" name="imagen" value="images/Nave.webp"> Destino
             </label>
             <!-- Asegúrate de cambiar las rutas a las rutas reales de tus imágenes -->
             <br>
             <button type="button" id="btnInicio">Iniciar</button>
         </div>   
     </div>
-    
-    <script src="funcion.js"></script>
+    <script type="module" src="script/funcion.js"></script>
 </body>
 </html>

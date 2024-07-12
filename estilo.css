@@ -1,41 +1,92 @@
 /* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
 body {
     margin: 0;
     height: 100vh;
-    display: flex;
-    align-items: center;
+    display:  flex;
     justify-content: center;
-    background-color: #000;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('images/FondoSpace.webp');
+	background-size: cover;
+}
+
+header > h1{
+	text-align: center;
+	background-color: rgba(90, 90, 138, 0.8);
+	font-family: "Orbitron", sans-serif;
+	padding: 10px 20px;
+	font-size: 2em;
+	color: white;
+	border-radius: 10px;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .contenedor {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    padding: 0 10px 0 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap; /* Asegura que los elementos internos se ajusten correctamente */
 }
 
 #tablero {
     display: grid;
-    min-width: 1080px; /* Ejemplo para un tablero con 18 columnas a 60px cada una */
-    min-height: 600px;
+    min-width: 950px; /* Ejemplo para un tablero con 18 columnas a 60px cada una */
+    min-height: 540px;
     margin-right: 20px; /* Espacio entre el tablero y las opciones */
-    background-image: url('FondoSpace.webp');
     background-size: cover;
     background-repeat: no-repeat;
-    grid-template-columns: repeat(18, 60px);
-    grid-template-rows: repeat(10, 60px);
+    grid-template-columns: repeat(18, 50px);
+    grid-template-rows: repeat(10, 50px);
     grid-gap: 1px;
     border: 1px solid #000; /* Añadido para visualizar las celdas si no hay imagen de fondo */
 }
 
 .opciones {
-    display: flex;
+    padding: 10px;
+    display: inline-flex;
     flex-direction: column;
     justify-content: center;
+	border-radius: 10px;
+	background-color: #fff;
+	font-family: "Orbitron", sans-serif;
+}
+
+.opciones label {
+    font-size: 1em;
+    color: #000;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.opciones input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #5a5a8a; 
+}
+
+.opciones button {
+    font-size: 1em;
+    color: white;
+    background-color: #5a5a8a;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.opciones button:hover {
+    background-color: #47476d;
 }
 
 .celda {
-    border: 1px solid #ddd; /* Añadido para visualizar las celdas si no hay imagen de fondo */
-    background-size: cover;
+    border: 1px solid #ddd;
+	background-size: cover;
     background-repeat: no-repeat;
-    
 }
-
